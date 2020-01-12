@@ -1,0 +1,47 @@
+{
+  "agent": {
+    "agentId": "xr00remittance",
+    "authToken": "88WU88162JJdasdasd211Kckce2"
+  },
+  "sendRemittanceRequest": {
+    "remittanceId": "REM01999000",
+    "remittanceCode": "AT",
+    "currencyCode": "LKR",
+    "customerName": {
+      "firstName": "Maduranga",
+      "middleName": "Gamage",
+      "lastName": "PM"
+    },
+    "customerIdentification": {
+      "identificationType": "NIC",
+      "identification": "862300572V"
+    },
+    "customerContact": "0772500015",
+    "beneficiaryName": {
+      "firstName": "Kasun",
+      "middleName": "Kumra",
+      "lastName": "Siriwardena"
+    },
+    "beneficiaryAddress": {
+      "addressLine1": "980/1",
+      "addressLine2": "Borella",
+      "addressLine3": "Sri Lanka"
+    },
+    "beneficiaryContact": "077899992",
+    "beneficiaryAccount": {
+      "accountName": "kasun kumara",
+      "accountId": "800909012"
+    },
+    "bank": {
+      "bankName": "Commercial Bank PLC",
+      "bankCode": "7056"
+    },
+    "branch": {
+      "branchName": "Borella",
+      "BranchCode": "19"
+    },
+    "senderTransaction": "1012901",
+    "specialNotes": "",
+    "amount": "40000.00"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "response": {
+    "responseCode": "A",
+    "responseMessage": "Success"
+  },
+  "banks": [
+    {
+      "bankName": "Alliance Finance Company PLC",
+      "bankCode": "7852"
+    },
+    {
+      "bankName": "Amana Bank PLC",
+      "bankCode": "7463"
+    },
+    {
+      "bankName": "Axis Bank",
+      "bankCode": "7472"
+    },
+    {
+      "bankName": "Bank of Ceylon",
+      "bankCode": "7010"
+    },
+    {
+      "bankName": "Cargills Bank Limited",
+      "bankCode": "7481"
+    },
+    {
+      "bankName": "Central Bank of Sri Lanka",
+      "bankCode": "8004"
+    },
+    {
+      "bankName": "Central Finance PLC",
+      "bankCode": "7825"
+    },
+    {
+      "bankName": "Citi Bank",
+      "bankCode": "7047"
+    },
+    {
+      "bankName": "Citizen Development Business Finance PLC",
+      "bankCode": "7746"
+    },
+    {
+      "bankName": "Commercial Bank PLC",
+      "bankCode": "7056"
+    },
+    {
+      "bankName": "Commercial Credit & Finance PLC",
+      "bankCode": "7870"
+    },
+    {
+      "bankName": "Commercial Leasing and Finance",
+      "bankCode": "7807"
+    },
+    {
+      "bankName": "Deutsche Bank",
+      "bankCode": "7205"
+    },
+    {
+      "bankName": "DFCC Bank PLC",
+      "bankCode": "7454"
+    },
+    {
+      "bankName": "Habib Bank Ltd",
+      "bankCode": "7074"
+    },
+    {
+      "bankName": "Hatton National Bank PLC",
+      "bankCode": "7083"
+    },
+    {
+      "bankName": "HDFC Bank",
+      "bankCode": "7737"
+    },
+    {
+      "bankName": "Hongkong Shanghai Bank",
+      "bankCode": "7092"
+    },
+    {
+      "bankName": "ICICI Bank Ltd",
+      "bankCode": "7384"
+    },
+    {
+      "bankName": "Indian Bank",
+      "bankCode": "7108"
+    },
+    {
+      "bankName": "Indian Overseas Bank",
+      "bankCode": "7117"
+    },
+    {
+      "bankName": "Kanrich Finance Limited",
+      "bankCode": "7834"
+    },
+    {
+      "bankName": "Lanka Orix Finance PLC",
+      "bankCode": "7861"
+    },
+    {
+      "bankName": "LB Finance PLC",
+      "bankCode": "7773"
+    },
+    {
+      "bankName": "MCB Bank Ltd",
+      "bankCode": "7269"
+    },
+    {
+      "bankName": "Mercantile Investment and Finance PLC",
+      "bankCode": "7913"
+    },
+    {
+      "bankName": "Merchant Bank of Sri Lanka & Finance PLC",
+      "bankCode": "7898"
+    },
+    {
+      "bankName": "National Development Bank PLC",
+      "bankCode": "7214"
+    },
+    {
+      "bankName": "National Savings Bank",
+      "bankCode": "7719"
+    },
+    {
+      "bankName": "Nations Trust Bank PLC",
+      "bankCode": "7162"
+    },
+    {
+      "bankName": "Pan Asia Banking Corporation PLC",
+      "bankCode": "7311"
+    },
+    {
+      "bankName": "Peoples Bank",
+      "bankCode": "7135"
+    },
+    {
+      "bankName": "People’s Leasing & Finance PLC",
+      "bankCode": "7922"
+    },
+    {
+      "bankName": "Public Bank",
+      "bankCode": "7296"
+    },
+    {
+      "bankName": "Regional Development Bank",
+      "bankCode": "7755"
+    },
+    {
+      "bankName": "Sampath Bank PLC",
+      "bankCode": "7278"
+    },
+    {
+      "bankName": "Sanasa Development Bank",
+      "bankCode": "7728"
+    },
+    {
+      "bankName": "Senkadagala Finance PLC",
+      "bankCode": "7782"
+    },
+    {
+      "bankName": "Seylan Bank PLC",
+      "bankCode": "7287"
+    },
+    {
+      "bankName": "Standard Chartered Bank",
+      "bankCode": "7038"
+    },
+    {
+      "bankName": "State Bank of India",
+      "bankCode": "7144"
+    },
+    {
+      "bankName": "State Mortgage & Investment Bank",
+      "bankCode": "7764"
+    },
+    {
+      "bankName": "Union Bank of Colombo PLC",
+      "bankCode": "7302"
+    },
+    {
+      "bankName": "Vallibel Finance PLC",
+      "bankCode": "7816"
+    }
+  ]
+}

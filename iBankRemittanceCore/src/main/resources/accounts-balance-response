@@ -1,0 +1,9 @@
+{
+  "response": {
+    "responseCode": "Success",
+    "responseMessage": "A"
+  },
+  "balanceMap": {
+    "20080010011": 123123.33
+  }
+}

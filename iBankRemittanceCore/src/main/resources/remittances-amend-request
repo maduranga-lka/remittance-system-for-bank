@@ -1,0 +1,32 @@
+{
+  "agent": {
+    "agentId": "xr00remittance",
+    "authToken": "88WU88162JJdasdasd211Kckce2"
+  },
+  "amendRemittanceRequest": {
+    "remittanceId": "REM01999000",
+    "currencyCode": "LKR",
+    "customerName": {
+      "firstName": "Kumara",
+      "middleName": "Silva",
+      "lastName": ""
+    },
+    "customerIdentification": {
+      "identificationType": "AA",
+      "identification": "BB"
+    },
+    "customerContact": "0772500011",
+    "beneficiaryName": {
+      "firstName": "Rasika",
+      "middleName": "Sameera",
+      "lastName": "Hewage"
+    },
+    "beneficiaryAddress": {
+      "addressLine1": "90/2",
+      "addressLine2": "Wijewardena Road",
+      "addressLine3": "Dambulla"
+    },
+    "beneficiaryContact": "0768818881",
+    "amount": "800090.00"
+  }
+}

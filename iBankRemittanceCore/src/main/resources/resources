@@ -1,0 +1,8 @@
+http://localhost:8080/iBankRemittanceApi/banks
+http://localhost:8080/iBankRemittanceApi/branches
+http://localhost:8080/iBankRemittanceApi/accounts/verify
+http://localhost:8080/iBankRemittanceApi/accounts/balance
+http://localhost:8080/iBankRemittanceApi/remittances/new
+http://localhost:8080/iBankRemittanceApi/remittances/amend
+http://localhost:8080/iBankRemittanceApi/remittances/cancel
+http://localhost:8080/iBankRemittanceApi/xremittances/status

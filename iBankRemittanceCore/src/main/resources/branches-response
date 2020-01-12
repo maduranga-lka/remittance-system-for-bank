@@ -1,0 +1,300 @@
+{
+  "branches": [
+    {
+      "branchName": "Akkaraipattu",
+      "branchCode": "172"
+    },
+    {
+      "branchName": "Akurana Service Point",
+      "branchCode": "219"
+    },
+    {
+      "branchName": "Akuressa",
+      "branchCode": "35"
+    },
+    {
+      "branchName": "Alawwa",
+      "branchCode": "188"
+    },
+    {
+      "branchName": "Aluthgama",
+      "branchCode": "40"
+    },
+    {
+      "branchName": "Ambalangoda",
+      "branchCode": "97"
+    },
+    {
+      "branchName": "Ambalantota",
+      "branchCode": "63"
+    },
+    {
+      "branchName": "Ampara",
+      "branchCode": "100"
+    },
+    {
+      "branchName": "Anniwatte CSP",
+      "branchCode": "254"
+    },
+    {
+      "branchName": "Anuradhapura",
+      "branchCode": "53"
+    },
+    {
+      "branchName": "Anuradhapura New Town",
+      "branchCode": "185"
+    },
+    {
+      "branchName": "Atchchuvely",
+      "branchCode": "156"
+    },
+    {
+      "branchName": "Athurugiriya",
+      "branchCode": "130"
+    },
+    {
+      "branchName": "Attidiya",
+      "branchCode": "231"
+    },
+    {
+      "branchName": "Avissawella",
+      "branchCode": "70"
+    },
+    {
+      "branchName": "Baddegama",
+      "branchCode": "98"
+    },
+    {
+      "branchName": "Badulla",
+      "branchCode": "52"
+    },
+    {
+      "branchName": "Badulla Minicom",
+      "branchCode": "244"
+    },
+    {
+      "branchName": "Balangoda",
+      "branchCode": "82"
+    },
+    {
+      "branchName": "Bambalapitiya",
+      "branchCode": "106"
+    },
+    {
+      "branchName": "Bandaragama (C.S.P.)",
+      "branchCode": "84"
+    },
+    {
+      "branchName": "Bandarawatta (Laugfs Super)",
+      "branchCode": "247"
+    },
+    {
+      "branchName": "Bandarawela",
+      "branchCode": "80"
+    },
+    {
+      "branchName": "Baseline",
+      "branchCode": "113"
+    },
+    {
+      "branchName": "Batapola",
+      "branchCode": "240"
+    },
+    {
+      "branchName": "Batharamulla Arpico Super Centre",
+      "branchCode": "252"
+    },
+    {
+      "branchName": "Battaramulla",
+      "branchCode": "29"
+    },
+    {
+      "branchName": "Batticaloa",
+      "branchCode": "105"
+    },
+    {
+      "branchName": "Batticaloa Minicom",
+      "branchCode": "242"
+    },
+    {
+      "branchName": "Beliatta",
+      "branchCode": "181"
+    },
+    {
+      "branchName": "Beruwala CSP",
+      "branchCode": "220"
+    },
+    {
+      "branchName": "BIA Counter",
+      "branchCode": "249"
+    },
+    {
+      "branchName": "Biyagama",
+      "branchCode": "147"
+    },
+    {
+      "branchName": "Bokundara CSP",
+      "branchCode": "226"
+    },
+    {
+      "branchName": "Boralesgamuwa",
+      "branchCode": "142"
+    },
+    {
+      "branchName": "Boralesgamuwa CSP",
+      "branchCode": "132"
+    },
+    {
+      "branchName": "Borella",
+      "branchCode": "19"
+    },
+    {
+      "branchName": "Card Centre",
+      "branchCode": "95"
+    },
+    {
+      "branchName": "Chankanai",
+      "branchCode": "239"
+    },
+    {
+      "branchName": "Chavakachcheri",
+      "branchCode": "126"
+    },
+    {
+      "branchName": "Chenkalady",
+      "branchCode": "168"
+    },
+    {
+      "branchName": "Chilaw",
+      "branchCode": "43"
+    },
+    {
+      "branchName": "Chunakkam",
+      "branchCode": "107"
+    },
+    {
+      "branchName": "City Office",
+      "branchCode": "2"
+    },
+    {
+      "branchName": "Colombo 07",
+      "branchCode": "50"
+    },
+    {
+      "branchName": "Colombo Gold Centre",
+      "branchCode": "237"
+    },
+    {
+      "branchName": "Dambulla",
+      "branchCode": "54"
+    },
+    {
+      "branchName": "Dankotuwa",
+      "branchCode": "164"
+    },
+    {
+      "branchName": "Dehiwala",
+      "branchCode": "58"
+    },
+    {
+      "branchName": "Dehiwala Arpico Super Centre",
+      "branchCode": "251"
+    },
+    {
+      "branchName": "Deiyandara",
+      "branchCode": "276"
+    },
+    {
+      "branchName": "Delgoda Laugfs Super",
+      "branchCode": "269"
+    },
+    {
+      "branchName": "Delkanda",
+      "branchCode": "134"
+    },
+    {
+      "branchName": "Deniyaya",
+      "branchCode": "111"
+    },
+    {
+      "branchName": "Digana",
+      "branchCode": "140"
+    },
+    {
+      "branchName": "Divulapitiya",
+      "branchCode": "180"
+    },
+    {
+      "branchName": "Duplication Road",
+      "branchCode": "68"
+    },
+    {
+      "branchName": "Eheliyagoda",
+      "branchCode": "158"
+    },
+    {
+      "branchName": "Ekala  (CSP)",
+      "branchCode": "71"
+    },
+    {
+      "branchName": "Elpitiya",
+      "branchCode": "103"
+    },
+    {
+      "branchName": "Embilipitiya",
+      "branchCode": "30"
+    },
+    {
+      "branchName": "Foreign",
+      "branchCode": "3"
+    },
+    {
+      "branchName": "Galewela",
+      "branchCode": "9"
+    },
+    {
+      "branchName": "Galle City",
+      "branchCode": "27"
+    },
+    {
+      "branchName": "Galle City Minicom",
+      "branchCode": "271"
+    },
+    {
+      "branchName": "Galle Fort",
+      "branchCode": "5"
+    },
+    {
+      "branchName": "Gampaha",
+      "branchCode": "44"
+    },
+    {
+      "branchName": "Gampaha CSP",
+      "branchCode": "218"
+    },
+    {
+      "branchName": "Gampola",
+      "branchCode": "102"
+    },
+    {
+      "branchName": "Ganemulla",
+      "branchCode": "177"
+    },
+    {
+      "branchName": "Gelioya Service Point",
+      "branchCode": "265"
+    },
+    {
+      "branchName": "Giriulla",
+      "branchCode": "182"
+    },
+    {
+      "branchName": "Godakawela CSP",
+      "branchCode": "197"
+    }
+  ],
+  "response": {
+    "responseCode": "A",
+    "responseMessage": "Success"
+  }
+}

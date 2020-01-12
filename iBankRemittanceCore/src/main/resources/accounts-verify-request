@@ -1,0 +1,10 @@
+{
+  "agent": {
+    "agentId":"xr00remittance",
+    "authToken":"88WU88162JJdasdasd211Kckce2"
+  },
+  "account":{
+    "accountName":"Xpress Remittance",
+    "accountId":"20080010011"
+  }
+}

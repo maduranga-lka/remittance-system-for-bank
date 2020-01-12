@@ -1,0 +1,10 @@
+{
+  "response": {
+    "responseCode": "Success",
+    "responseMessage": "A"
+  },
+  "remittanceStatus": {
+    "REM01999001": "REMITTED",
+    "REM01999000": "CANCELLED"
+  }
+}
