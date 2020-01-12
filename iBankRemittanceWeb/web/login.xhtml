@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> 
+
+    <body>
+
+        <ui:composition template="./login-template.xhtml"> 
+            <ui:define name="content">
+                <h:form id="login">
+                    <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+                    <p:panel header="User Login">
+                        <h:panelGrid columns="3"   title="User Login"> 
+                            
+                            <h:outputText value="UserName  :  " />
+                            <p:inputText autocomplete="off" id="username" value="#{login.user}"></p:inputText>
+                            <p:message for="username"></p:message> 
+
+                            <h:outputText value="Password  :  " />
+                            <p:password  autocomplete="off" id="password" value="#{login.pwd}"></p:password>
+                            <p:message for="password"></p:message> 
+
+                            <p:commandButton action="#{login.validateUsernamePassword}"
+                                          update="login"   value="Login" icon="ui-icon-key"></p:commandButton>
+
+                        </h:panelGrid> 
+                    </p:panel>
+                </h:form>
+            </ui:define> 
+        </ui:composition>
+
+    </body>
+</html>

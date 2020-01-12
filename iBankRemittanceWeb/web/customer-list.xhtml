@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="customer-template.xhtml"> 
+
+            <ui:define name="content">
+                <h:form id="form">
+                    <p:growl id="msgs" showDetail="true" /> 
+<!--                    <table id="t01">
+                        <tr>
+                            <th>
+                                <div> 
+                                    <h:outputText value="Hello," />
+                                    <h:outputText value="#{customerBean.userName}" /> 
+                                    <h:outputText value="  You are logged in as " /> 
+                                    <h:outputText value="#{customerBean.sessionUserRole} user, " />  
+                                    <h:outputText value="Last login Date Time : #{customerBean.lastLoginDateTime} " />  
+                                    <p:spacer   height="10" width="50"/>
+                                    <ui:param name="role" value="#{customerBean.sessionUserRole}" />
+                                </div>
+                            </th> 
+                        </tr>
+                    </table> -->
+                    <p:spacer height="10" />
+                    <div>
+                        <p:accordionPanel activeIndex="null">
+                            <p:tab title="Search Filters">
+                                <h:panelGrid columns="2" cellpadding="10">    
+                                    <h:outputText value="First Name: " /> 
+                                    <p:inputText  maxlength="45" id="searchName1"   style="width: 200px;" value="#{customerBean.searchFirstName}" /> 
+                                   
+                                    <p:commandButton value="Search" id="nonAjax" actionListener="#{customerBean.searchCustomer}" icon="ui-icon-search" ajax="true" update=":form"/>
+
+                                </h:panelGrid>
+                            </p:tab>
+                        </p:accordionPanel>
+                    </div>
+
+                    <p:dataTable editable="true" id="basicDT" var="cus" value="#{customerBean.customers}"   rows="10" paginator="true">
+                        <h:inputHidden value="#{customerBean.customerReference}" />
+                        <f:facet name="header">
+                            Customers List
+                        </f:facet>
+                        <p:ajax event="rowEdit" listener="#{customerBean.onRowEdit}" update=":form:msgs" />
+                        <p:ajax event="rowEditCancel" listener="#{customerBean.onRowDelete}" update=":form:msgs" /> 
+                        <p:column headerText="First Name" style="text-align: left;"> 
+                            <p:cellEditor> 
+                                <f:facet name="output"><h:outputText value="#{cus.firstName}" /></f:facet>
+                                <f:facet name="input">
+                                    <p:inputText  maxlength="45" id="firstname" validatorMessage="Alphabetic characters only" value="#{cus.firstName}" required="true" label="Name">
+                                        <f:validateRegex pattern="[a-zA-Z ]+"/>
+                                    </p:inputText>
+                                    <p:message for="firstname" /> 
+                                </f:facet>
+                            </p:cellEditor>
+                        </p:column> 
+
+                        <p:column headerText="Last Name" style="text-align: left;"> 
+                            <p:cellEditor> 
+                                <f:facet name="output"><h:outputText value="#{cus.lastName}" /></f:facet>
+                                <f:facet name="input">
+                                    <p:inputText id="lastname" maxlength="45" validatorMessage="Alphabetic characters only" value="#{cus.lastName}" required="true" label="Name">
+                                        <f:validateRegex pattern="[a-zA-Z ]+"/>
+                                    </p:inputText>
+                                    <p:message for="lastname" /> 
+                                </f:facet>
+                            </p:cellEditor>
+                        </p:column> 
+
+                        <p:column headerText="Phone No" style="text-align: left;"> 
+                            <p:cellEditor> 
+                                <f:facet name="output"><h:outputText value="#{cus.personalPhone}" /></f:facet>
+                                <f:facet name="input">
+                                    <p:inputMask id="phone" maxlength="10" validatorMessage="Mobile number is required" mask="(999) 999-9999" value="#{cus.personalPhone}" required="true"/>
+                                    <p:message for="phone" />  
+                                </f:facet>
+                            </p:cellEditor>
+                        </p:column> 
+
+                        <p:column headerText="Email Address" style="text-align: left;"> 
+                            <p:cellEditor> 
+                                <f:facet name="output"><h:outputText value="#{cus.emailAddress}" /></f:facet>
+                                <f:facet name="input"> 
+                                    <p:inputText id="email" maxlength="45" value="#{cus.emailAddress}" required="true">
+                                        <f:validator validatorId="custom.emailValidator" />
+                                    </p:inputText>
+                                    <p:message for="email"/>  
+                                </f:facet>
+                            </p:cellEditor>
+                        </p:column> 
+
+                        <p:column headerText="Personal Address" style="text-align: left;"> 
+                            <p:cellEditor> 
+                                <f:facet name="output"><h:outputText value="#{cus.mailingAddress}" /></f:facet>
+                                <f:facet name="input">
+                                    <p:inputText id="address" maxlength="100" validatorMessage="Alphabetic characters only" value="#{cus.mailingAddress}" required="true" label="Name">
+                                        <f:validateRegex pattern="^[a-zA-Z0-9.,/ ]+$"/>    
+                                    </p:inputText>
+                                    <p:message for="address" /> 
+                                </f:facet>
+                            </p:cellEditor>
+                        </p:column> 
+
+                        <p:column headerText="Company" style="text-align: left; ">
+                            <p:cellEditor> 
+                                <f:facet name="output"><h:outputText value="#{cus.company}" /></f:facet>
+                                <f:facet name="input">
+                                    <p:inputText id="Company" maxlength="45" validatorMessage="Alphabetic characters only" value="#{cus.company}" label="Name"/> 
+                                    <p:message for="Company" /> 
+                                </f:facet>
+                            </p:cellEditor>
+                        </p:column> 
+
+                        <p:column headerText="Job Title" style="text-align: left;">
+                            <p:cellEditor>  
+                                <f:facet name="output"><h:outputText value="#{cus.jobTitle}" /></f:facet>
+                                <f:facet name="input">
+                                    <p:inputText id="jobtitle" maxlength="20" validatorMessage="Alphabetic characters only" value="#{cus.jobTitle}"  label="Name">
+                                        <f:validateRegex pattern="^[a-zA-Z0-9 ]+$"/>
+                                    </p:inputText>
+                                    <p:message for="jobtitle" />  
+                                </f:facet>
+                            </p:cellEditor>
+                        </p:column> 
+
+                        <p:column headerText="Contactable" style="text-align: left; width: 6%">
+                            <p:cellEditor>   
+                                <f:facet name="output"> <h:outputText value="#{cus.doNotContact == 'true' ? 'Yes' : 'No'}" /></f:facet>
+                                <f:facet name="input"> <p:selectBooleanCheckbox id = "contact" value="#{cus.doNotContact}" style="width:100%"/></f:facet> 
+                            </p:cellEditor>
+                        </p:column>  
+
+                        <ui:param name="role" value="#{customerBean.sessionUserRole}" />
+                        <p:column style="width:32px" headerText="Manage Data" rendered="#{userRoleBean.hasRole(role,'manageExistingCustomer')}">
+                            <p:rowEditor /> 
+                        </p:column>
+                    </p:dataTable>
+                </h:form>
+            </ui:define>  
+        </ui:composition>
+
+    </body>
+</html>

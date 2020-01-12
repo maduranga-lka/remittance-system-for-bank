@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> </meta>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> </link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <title>XYZ Pvt Ltd | Customer Database</title>
+        <style type="text/css">
+            .ui-stack {
+                z-index: 1000;
+            }
+        </style>
+    </h:head>   
+
+    <h:body>
+
+        <div id="top" >
+            <ui:insert name="top">  
+                <h:form>  
+                    <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">Remittance Agent Integration Portal</a>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li class="active">
+
+                                    <p:commandLink id="LIST"  action="#{customerBean.gotoAgentsList}"  ajax="false">
+                                        LIST
+                                    </p:commandLink>  
+                                </li>
+                                <li>
+
+
+                                    <p:commandLink id="AGENT"  action="#{customerBean.goToNewCustomerPage}"  ajax="false">
+                                        NEW AGENT 
+                                    </p:commandLink>  
+
+                                </li>
+                                <li>
+                                    <p:commandLink id="DASHBOARD"  action="#{customerBean.goToNewCustomerPage}" ajax="false">
+                                        DASHBOARD
+                                    </p:commandLink>  
+
+                                </li>
+                                <li><a href="#">BANK DETAILS</a></li> 
+
+                                <div id="logoff">
+                                    <p:commandLink id="logoff"  action="#{login.logout}" ajax="false">
+                                        <h:outputText value="Logoff" />
+                                    </p:commandLink>  
+                                </div>
+
+                            </ul>
+                        </div>
+                    </nav>  
+
+                </h:form>  
+            </ui:insert>
+        </div>
+
+
+        <div id="content" class="center_content">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+
+        <div id="bottom">
+            <h:form>  
+                
+                <p:stack icon="/resources/demo/images/dock/stack.png" expanded="true">
+                    <p:menuitem value="Home" icon="/resources/docker-logo-png-transparent.png" url="#"/>
+                    <p:menuitem value="Music" icon="/resources/docker-logo-png-transparent.png" url="#"/>
+                    <p:menuitem value="Video" icon="/resources/demo/images/dock/video.png" url="#"/>
+                    <p:menuitem value="Email" icon="/resources/demo/images/dock/email.png" url="#"/>
+                    <p:menuitem value="Portfolio" icon="/resources/demo/images/dock/portfolio.png" url="#"/>
+                </p:stack>
+            </h:form> 
+            <ui:insert name="bottom">Copyright © 2019 iBank Ltd. All rights reserved.</ui:insert>
+        </div>
+
+    </h:body>
+
+</html>

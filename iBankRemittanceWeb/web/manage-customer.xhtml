@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> 
+
+    <body>
+
+        <ui:composition template="./customer-template.xhtml"> 
+
+            <ui:define name="content">
+                <h:form id="customer">
+                    <p:growl id="growl" showDetail="true" sticky="true" /> 
+                    <p:clock pattern="HH:mm:ss dd.MM.yyyy" mode="server" />
+                    <p:panel header="Manage Customer Reference #{customerManageBean.customer.customerReference}"> 
+                        <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+                        <h:panelGrid id="grid" columns="3" cellpadding="5"> 
+
+                            <h:outputLabel for="ref" value="Customer Reference Number :"   rendered="#{customerManageBean.renderControllers}" />
+                            <h:outputLabel id="ref" value="#{customerManageBean.customer.customerReference}"  rendered="#{customerManageBean.renderControllers}" />
+                            <p:message for="ref" />  
+
+                            <h:outputLabel for="name1" value="Fist Name: *"  rendered="#{customerManageBean.renderControllers}"/>                    
+                            <p:inputText  maxlength="45" id="name1" validatorMessage="Alphabetic characters only" rendered="#{customerManageBean.renderControllers}" value="#{customerManageBean.customer.firstName}" required="true" label="Name">
+                                <f:validateRegex pattern="[a-zA-Z]+"/>
+                            </p:inputText>
+                            <p:message for="name1" /> 
+
+                            <h:outputLabel for="name2" value="Last Name: *" rendered="#{customerManageBean.renderControllers}"/>                    
+                            <p:inputText id="name2" maxlength="45" validatorMessage="Alphabetic characters only" rendered="#{customerManageBean.renderControllers}" value="#{customerManageBean.customer.lastName}" required="true" label="Name">
+                                <f:validateRegex pattern="[a-zA-Z]+"/>
+                            </p:inputText>
+                            <p:message for="name2" />  
+
+                            <h:outputLabel for="email1" value="Email Address: *"  rendered="#{customerManageBean.renderControllers}" />
+                            <p:inputText id="email1" maxlength="45" value="#{customerManageBean.customer.emailAddress}" rendered="#{customerManageBean.renderControllers}" required="true">
+                                <f:validator validatorId="custom.emailValidator" />
+                            </p:inputText>
+                            <p:message for="email1"/>  
+
+                            <h:outputLabel for="address" value="Personal Address: *"  rendered="#{customerManageBean.renderControllers}" />
+                            <p:inputText id="address" maxlength="100" validatorMessage="Alphabetic characters only" rendered="#{customerManageBean.renderControllers}" value="#{customerManageBean.customer.mailingAddress}" required="true" label="Name">
+
+                            </p:inputText>
+                            <p:message for="address" /> 
+
+                            <h:outputLabel for="Company" value="Company :"  rendered="#{customerManageBean.renderControllers}"/>
+                            <p:inputText id="Company" maxlength="45" validatorMessage="Alphabetic characters only" rendered="#{customerManageBean.renderControllers}" value="#{customerManageBean.customer.company}" label="Name"/> 
+                            <p:message for="Company" /> 
+
+                            <h:outputLabel for="jobtitle" value="Job Title:" rendered="#{customerManageBean.renderControllers}" />
+                            <p:inputText id="jobtitle" maxlength="20" validatorMessage="Alphabetic characters only" rendered="#{customerManageBean.renderControllers}" value="#{customerManageBean.customer.jobTitle}"  label="Name">
+                                <f:validateRegex pattern="^[a-zA-Z0-9]+$"/>
+                            </p:inputText>
+                            <p:message for="jobtitle" />  
+
+                            <h:outputText value="Do not contact:"  rendered="#{customerManageBean.renderControllers}"/>
+                            <p:selectBooleanCheckbox id = "contact" validatorMessage="Please select" rendered="#{customerManageBean.renderControllers}" value="#{customerManageBean.customer.doNotContact}" required="true"/>
+                            <p:message for="contact" />  
+
+                        </h:panelGrid>
+                    </p:panel>
+                    <p:commandButton value="Update Customer"  rendered="#{customerManageBean.renderChangeButton}" update="cusdts,growl"  action="#{customerManageBean.changeCustomerData}" icon="ui-icon-person" ajax="true" validateClient="true" style="margin-right:10px">
+                        <f:ajax  resetValues="true"/>
+                    </p:commandButton>
+
+                    <p:commandButton value="Delete Customer" rendered="#{customerManageBean.renderDeleteButton}" update="cusdts"  action="#{customerManageBean.removeCustomer}" icon="ui-icon-person" ajax="true" validateClient="true" style="margin-right:10px">
+                        <f:ajax  resetValues="true"/>
+                    </p:commandButton>
+
+                    <p:commandButton value="GoBack to Home Page" rendered="#{customerManageBean.renderGoBackButton}"   action="#{customerManageBean.goBack}" icon="ui-icon-person"  style="margin-right:10px">
+
+                    </p:commandButton>
+
+                </h:form>
+            </ui:define> 
+
+        </ui:composition>
+
+    </body>
+</html>

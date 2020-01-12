@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <SCRIPT type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </SCRIPT>
+
+    <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+
+        <ui:composition template="./customer-template.xhtml">  
+
+            <ui:define name="content">
+                <h:form id="customer">
+                  
+                    <p:panel header="New Customer"> 
+                        <p:messages id="messages" showDetail="true" closable="true" />
+                        <h:panelGrid id="grid" columns="3" cellpadding="5" cellspacing="10">
+                            <h:outputLabel for="agentName" value="Agent Name: *"  />                    
+                            <p:inputText  maxlength="45" id="agentName" validatorMessage="Alphabetic characters only" value="#{customerBean.customer.firstName}" required="true" label="Name">
+                                <f:validateRegex pattern="[a-zA-Z ]+"/>
+                            </p:inputText>
+                            <p:message for="agentName" /> 
+                            
+                            <h:outputLabel for="country" value="Country: *" />                    
+                            <p:inputText id="lastname" maxlength="45" validatorMessage="Alphabetic characters only" value="#{customerBean.customer.lastName}" required="true" label="Name">
+                                <f:validateRegex pattern="[a-zA-Z ]+"/>
+                            </p:inputText>
+                            <p:message for="lastname" /> 
+
+                            <h:outputLabel for="currency" value="Base Currency Code *" />                    
+                            <p:inputText id="currency" maxlength="45" validatorMessage="Alphabetic characters only" value="#{customerBean.customer.lastName}" required="true" label="Name">
+                                <f:validateRegex pattern="[a-zA-Z ]+"/>
+                            </p:inputText>
+                            <p:message for="currency" /> 
+
+                            <h:outputLabel for="phone" value="IPADdresses Check hu: *" />    
+                            <p:inputMask id="phone" maxlength="10" validatorMessage="Mobile number is required" mask="(999) 999-9999" value="#{customerBean.customer.personalPhone}" required="true"/>
+                            <p:message for="phone" />  
+
+                            <h:outputLabel for="email" value="Charge Hu *"   />
+                            <p:inputText id="email" maxlength="45" value="#{customerBean.customer.emailAddress}" required="true">
+                                <f:validator validatorId="custom.emailValidator" />
+                            </p:inputText>
+                            <p:message for="email"/>  
+
+                            <h:outputLabel for="address" value="Notification Hu: *"   />
+                            <p:inputText id="address" maxlength="100" validatorMessage="Alphabetic characters only" value="#{customerBean.customer.mailingAddress}" required="true" label="Name">
+                                <f:validateRegex pattern="^[a-zA-Z0-9.,/ ]+$"/>    
+                            </p:inputText>
+                            <p:message for="address" /> 
+
+                           
+
+                        </h:panelGrid>
+                    </p:panel>
+                    <p:commandButton value="Create Customer" update="customer"  action="#{customerBean.submitCustomerData}" icon="ui-icon-person" ajax="true" validateClient="true" style="margin-right:10px">
+                        <f:ajax  resetValues="true"/>
+                    </p:commandButton>
+
+                </h:form>
+                <script type="text/javascript">
+                    /**
+                     * Faces Validator
+                     */
+                    PrimeFaces.validator['custom.emailValidator'] = {
+                        pattern: /\S+@\S+/,
+                        validate: function (element, value) {
+                            //use element.data() to access validation metadata, in this case there is none.
+                            if (!this.pattern.test(value)) {
+                                throw {
+                                    summary: 'Validation Error',
+                                    detail: value + ' is not a valid email.'
+                                }
+                            }
+                        }
+                    };
+
+                    /**
+                     * Bean validator
+                     */
+                    PrimeFaces.validator['Email'] = {
+                        pattern: /\S+@\S+/,
+                        MESSAGE_ID: 'org.primefaces.examples.validate.email.message',
+                        validate: function (element, value) {
+                            var vc = PrimeFaces.util.ValidationContext;
+
+                            if (!this.pattern.test(value)) {
+                                var msgStr = element.data('p-email-msg'),
+                                        msg = msgStr ? {summary: msgStr, detail: msgStr} : vc.getMessage(this.MESSAGE_ID);
+
+                                throw msg;
+                            }
+                        }
+                    };
+                </script>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
